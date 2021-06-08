@@ -2,14 +2,14 @@ let projects = document.querySelector('#projects');
 const javascript = document.querySelector('.javascript');
 const react = document.querySelector('.react');
 const node = document.querySelector('.node');
-const python = document.querySelector('.python');
+const videos = document.querySelector('.videos');
 
 const project = document.querySelectorAll('.project');
 
 javascript.addEventListener('click', showJavascript);
 react.addEventListener('click', showReact);
 node.addEventListener('click', showNode);
-python.addEventListener('click', showPython);
+videos.addEventListener('click', showVideos);
 
 function showJavascript(e){
         e.preventDefault();
@@ -46,12 +46,12 @@ function showNode(e){
         }
 }
 
-function showPython(e){
+function showVideos(e){
         e.preventDefault();
 
         for(let i = 0; i < project.length; i++){
                 project[i].style.display = 'inline-block';
-                if(project[i].classList.value !== 'project python'){
+                if(project[i].classList.value !== 'project videos'){
                         project[i].style.display = 'none';
                 }
 
