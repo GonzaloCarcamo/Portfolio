@@ -13,7 +13,6 @@ python.addEventListener('click', showPython);
 
 function showJavascript(e){
         e.preventDefault();
-
         for(let i = 0; i < project.length; i++){
                 project[i].style.display = 'inline-block';
                 if(project[i].classList.value !== 'project javascript'){
