@@ -2,14 +2,18 @@ let projects = document.querySelector('#projects');
 const javascript = document.querySelector('.javascript');
 const react = document.querySelector('.react');
 const node = document.querySelector('.node');
-const videos = document.querySelector('.videos');
+const vue = document.querySelector('.vue');
+const todos = document.querySelector('.todos');
 
 const project = document.querySelectorAll('.project');
 
 javascript.addEventListener('click', showJavascript);
 react.addEventListener('click', showReact);
 node.addEventListener('click', showNode);
-videos.addEventListener('click', showVideos);
+vue.addEventListener('click', showVue);
+todos.addEventListener('click', () => {
+        project[i].style.display = 'inline-block';
+})
 
 function showJavascript(e){
         e.preventDefault();
@@ -46,12 +50,12 @@ function showNode(e){
         }
 }
 
-function showVideos(e){
+function showVue(e){
         e.preventDefault();
 
         for(let i = 0; i < project.length; i++){
                 project[i].style.display = 'inline-block';
-                if(project[i].classList.value !== 'project videos'){
+                if(project[i].classList.value !== 'project vue'){
                         project[i].style.display = 'none';
                 }
 
