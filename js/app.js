@@ -11,9 +11,14 @@ javascript.addEventListener('click', showJavascript);
 react.addEventListener('click', showReact);
 node.addEventListener('click', showNode);
 vue.addEventListener('click', showVue);
-todos.addEventListener('click', () => {
-        project[i].style.display = 'inline-block';
-})
+todos.addEventListener('click', showTodos);
+
+function showTodos(e){
+        e.preventDefault();
+        for(let i = 0; i < project.length; i++){
+                project[i].style.display = 'inline-block';
+        }
+}
 
 function showJavascript(e){
         e.preventDefault();
